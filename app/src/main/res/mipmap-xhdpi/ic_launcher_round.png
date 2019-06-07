@@ -1,0 +1,196 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layoutDirection="ltr"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        >
+
+
+
+
+
+        <android.support.v7.widget.Toolbar
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="@drawable/backgroundprofile"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="36dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/imginvite"
+                        android:padding="2dp"
+                        android:src="@drawable/invitefriend"
+                        android:layout_width="36dp"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:visibility="gone"
+                        android:id="@+id/btnnuminvite"
+                        android:textSize="10dp"
+                        android:text="2"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/circleinvite"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp" />
+
+                </android.support.design.widget.CoordinatorLayout>
+
+
+
+
+                <ImageView
+
+                    android:id="@+id/imginstgram"
+                    android:src="@drawable/instagram"
+                    android:layout_width="40dp"
+
+                    android:layout_height="match_parent" />
+
+                <ImageView
+
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/imginstgram"
+                    android:id="@+id/imgtelegram"
+                    android:src="@drawable/telegram"
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:padding = "2dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/imgtelegram"
+                    android:id="@+id/imgacceptinvite"
+                    android:src="@drawable/accept"
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent" />
+
+
+            </RelativeLayout>
+
+
+
+        </android.support.v7.widget.Toolbar>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_container"
+        android:layout_below="@id/title"
+        android:fillViewport="false"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.crystalviewpager.widgets.CrystalViewPager
+                android:id="@+id/pager_image_top"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:elevation="8dp"
+                app:ctl_vp_transition="cube_out" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layoutDirection="ltr">
+
+                <TextView
+
+                    android:id="@+id/txttitleone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="5dp"
+                    android:text="جدیدترین ها"
+                    android:textColor="#000000"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/txtalltopone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layoutDirection="rtl"
+                    android:text="همه>"
+                    android:textColor="#000000"
+                    android:textSize="11dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layoutDirection="rtl">
+
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="4dp"
+                android:background="#acb4ac">
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layoutDirection="ltr">
+
+                <TextView
+
+                    android:id="@+id/txttitletwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_mar
